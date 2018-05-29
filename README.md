@@ -1,17 +1,27 @@
-External libraries
-===
+# Shoptet microsite template
 
-Bootstrap v4.1.1
----
+## Prerequisities
+
+- Sass https://sass-lang.com/
+
+## Usage
+
+- create **main.scss**
+- in **main.scss** import **shoptet.scss**
+- use existing markup from **index.html**
+- create custom **.scss** modules
+
+### External libraries
+
+#### Bootstrap v4.1.1
 https://github.com/twbs/bootstrap
 
-Font Awesome Free v5.0.13
-----
+#### Font Awesome Free v5.0.13
 https://github.com/FortAwesome/Font-Awesome
 
-Colorbox v1.6.4
-----
-https://github.com/jackmoore/colorbox 
+#### Colorbox v1.6.4
+https://github.com/jackmoore/colorbox
 
 
-Get footer on https://www.shoptet.cz/action/ShoptetFooter/render/?id=shoptet.cz
+### Shoptet shared footer
+https://www.shoptet.cz/action/ShoptetFooter/render/?id=shoptet.cz
