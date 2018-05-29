@@ -32,20 +32,3 @@
 @import "shoptet/navigation";
 @import "shoptet/header";
 @import "shoptet/section";
-
-code {
-    background-color: #fff;
-    border: 1px solid $border-color;
-    &.code-html {
-        color: blue;
-    }
-}
-.code-block {
-    display: block;
-    padding: 2px 5px;
-    + .code-block {
-        margin-top: $spacer / 2;
-    }
-}
-
-

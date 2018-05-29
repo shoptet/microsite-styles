@@ -1,0 +1,18 @@
+// Font Awesome
+$fa-font-path: "vendor/fa/webfonts";
+@import "shoptet";
+
+code {
+    background-color: #fff;
+    border: 1px solid $border-color;
+    &.code-html {
+        color: blue;
+    }
+}
+.code-block {
+    display: block;
+    padding: 2px 5px;
+    + .code-block {
+        margin-top: $spacer / 2;
+    }
+}
