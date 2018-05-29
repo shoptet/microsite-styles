@@ -2453,7 +2453,7 @@ select.form-control-lg:not([size]):not([multiple]), .input-group-lg > select.for
 .alert {
   position: relative;
   padding: 0.75rem 1.25rem;
-  margin-bottom: 1rem;
+  margin-bottom: 0;
   border: 1px solid transparent;
   border-radius: 0.25rem; }
 
@@ -2916,14 +2916,557 @@ pre {
 .section-inner .breadcrumb {
   padding-top: 0; }
 
-code {
-  background-color: #fff;
+.claim {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  text-align: center;
+  font-size: 1.5rem;
+  font-weight: 100; }
+  .claim::after {
+    content: '';
+    display: block;
+    width: 100%;
+    height: 150px;
+    margin-top: 30px;
+    background-image: url("img/bulbs.png");
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: contain; }
+  @media (min-width: 576px) {
+    .claim {
+      font-size: 1.875rem; } }
+  @media (min-width: 768px) {
+    .claim {
+      text-align: left; }
+      .claim::after {
+        flex-grow: 1;
+        flex-shrink: 0;
+        width: 33.333333%;
+        margin-top: 0; } }
+  @media (min-width: 992px) {
+    .claim {
+      font-size: 1.875rem; }
+      .claim::after {
+        height: 239px; } }
+
+@media (min-width: 768px) {
+  .claim-inner {
+    flex-grow: 0;
+    flex-shrink: 1;
+    width: 66.666666%;
+    padding-right: 30px; } }
+
+.services {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: stretch;
+  justify-content: space-between;
+  margin-bottom: -30px; }
+  .services + .more,
+  .services + .pagination {
+    margin-top: 2rem; }
+
+.service {
+  position: relative;
+  flex-grow: 0;
+  flex-shrink: 1;
+  display: flex;
+  flex-wrap: wrap;
+  width: 100%;
+  margin-bottom: 30px;
+  border: 1px solid #e9e9e9;
+  border-radius: 0.25rem;
+  transition: all 0.2s ease-in-out; }
+  @media screen and (prefers-reduced-motion: reduce) {
+    .service {
+      transition: none; } }
+  .service:hover {
+    text-decoration: none;
+    box-shadow: 0 0 0.65rem rgba(17, 17, 17, 0.15); }
+  @media (min-width: 576px) {
+    .service {
+      width: calc(50% - 15px); } }
+  @media (min-width: 992px) {
+    .service {
+      width: calc(25% - 23px); }
+      .half .service {
+        width: calc(50% - 15px); } }
+
+.service-img,
+.service-title,
+.service-info,
+.service-rating {
+  width: 100%; }
+
+.service-img {
+  align-self: flex-start;
+  display: block;
+  max-width: 100%;
+  margin: 0 0 15px; }
+  @media (min-width: 576px) {
+    .service-img {
+      margin-left: auto;
+      margin-right: auto;
+      border-top-left-radius: 0.25rem;
+      border-top-right-radius: 0.25rem; } }
+
+.service-title,
+.service-info {
+  margin: 0 0 8px;
+  padding: 0 15px; }
+
+.service-title {
+  font-size: 1rem; }
+
+.service-info {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center; }
+
+.service-price {
+  padding-right: 15px;
+  font-weight: 700;
+  color: #111; }
+
+.service-category,
+.service-rating {
+  color: #666; }
+
+.service-category {
+  padding-right: 15px; }
+
+.service-rating,
+.service-labels {
+  font-size: 0.8203125rem; }
+
+.service-rating {
+  display: flex;
+  align-self: flex-end;
+  align-items: center;
+  padding: 1rem 15px;
+  background-color: #e9ecef; }
+
+.service-rating-stars,
+.service-rating-count {
+  flex-grow: 1;
+  flex-shrink: 0;
+  width: 50%;
+  line-height: 0; }
+
+.service-labels {
+  position: absolute;
+  right: 0;
+  top: 15px; }
+
+.service-label {
+  margin-bottom: 8px;
+  padding: 0 8px;
+  color: #fff; }
+  .service-label.service-label-shoptet {
+    background-color: #21afe5; }
+
+.service-rating-count {
+  text-align: right; }
+
+.halfs {
+  display: flex;
+  align-items: flex-start;
+  flex-wrap: wrap; }
+
+.half {
+  flex-grow: 1;
+  flex-shrink: 1;
+  width: 100%; }
+  @media (min-width: 768px) {
+    .half {
+      width: 50%; }
+      .aligned-right .half:first-child {
+        order: 2;
+        padding-left: 15px; }
+      .aligned-right .half:last-child {
+        order: 1;
+        padding-right: 15px; }
+      .aligned-left .half:first-child {
+        order: 1;
+        padding-right: 15px; }
+      .aligned-left .half:last-child {
+        order: 2;
+        padding-left: 15px; } }
+
+.star {
+  position: relative;
+  display: inline-block;
+  width: 0;
+  height: 0;
+  margin-left: .6em;
+  margin-right: .6em;
+  margin-bottom: 8px;
+  border-right: .3em solid transparent;
+  border-bottom-width: .7em;
+  border-bottom-style: solid;
+  border-left: .3em solid transparent;
+  font-size: 8px; }
+  .star::before, .star::after {
+    content: '';
+    position: absolute;
+    top: .6em;
+    left: -1em;
+    display: block;
+    width: 0;
+    height: 0;
+    border-right: 1em solid transparent;
+    border-bottom-width: .7em;
+    border-bottom-style: solid;
+    border-left: 1em solid transparent;
+    transform: rotate(-35deg); }
+  .star::after {
+    transform: rotate(35deg); }
+  .stars-big .star {
+    font-size: 10px; }
+  .star.star-off {
+    border-bottom-color: #bcbcbc; }
+    .star.star-off::before, .star.star-off::after {
+      border-bottom-color: #bcbcbc; }
+  .star.star-on {
+    border-bottom-color: #f7a12b; }
+    .star.star-on::before, .star.star-on::after {
+      border-bottom-color: #f7a12b; }
+
+/*
+    Colorbox Core Style:
+    The following CSS is consistent between example themes and should not be altered.
+*/
+#colorbox, #cboxOverlay, #cboxWrapper {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 9999;
+  overflow: hidden;
+  -webkit-transform: translate3d(0, 0, 0); }
+
+#cboxWrapper {
+  max-width: none; }
+
+#cboxOverlay {
+  position: fixed;
+  width: 100%;
+  height: 100%; }
+
+#cboxMiddleLeft, #cboxBottomLeft {
+  clear: left; }
+
+#cboxContent {
+  position: relative; }
+
+#cboxLoadedContent {
+  overflow: auto;
+  -webkit-overflow-scrolling: touch; }
+
+#cboxTitle {
+  margin: 0; }
+
+#cboxLoadingOverlay, #cboxLoadingGraphic {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%; }
+
+#cboxPrevious, #cboxNext, #cboxClose, #cboxSlideshow {
+  cursor: pointer; }
+
+.cboxPhoto {
+  float: left;
+  margin: auto;
+  border: 0;
+  display: block;
+  max-width: none;
+  -ms-interpolation-mode: bicubic; }
+
+.cboxIframe {
+  width: 100%;
+  height: 100%;
+  display: block;
+  border: 0;
+  padding: 0;
+  margin: 0; }
+
+#colorbox, #cboxContent, #cboxLoadedContent {
+  box-sizing: content-box;
+  -moz-box-sizing: content-box;
+  -webkit-box-sizing: content-box; }
+
+/*
+    User Style:
+    Change the following styles to modify the appearance of Colorbox.  They are
+    ordered & tabbed in a way that represents the nesting of the generated HTML.
+*/
+#cboxOverlay {
+  background: rgba(255, 255, 255, 0.85); }
+
+#colorbox {
+  outline: 0; }
+
+#cboxContent {
+  margin-top: 32px;
+  overflow: visible;
+  background: #fff; }
+
+.cboxIframe {
+  background: #fff; }
+
+#cboxError {
+  padding: 50px;
   border: 1px solid #e9e9e9; }
-  code.code-html {
-    color: blue; }
+
+#cboxLoadedContent {
+  background: #e9e9e9;
+  padding: 1px; }
+
+#cboxLoadingGraphic {
+  background: url(img/colorbox/loading.gif) no-repeat center center; }
+
+#cboxLoadingOverlay {
+  background: #fff; }
+
+#cboxTitle {
+  position: absolute;
+  top: -22px;
+  left: 0;
+  color: #666; }
+
+#cboxCurrent {
+  position: absolute;
+  top: -22px;
+  right: 205px;
+  text-indent: -9999px; }
+
+/* these elements are buttons, and may need to have additional styles reset to avoid unwanted base styles */
+#cboxPrevious, #cboxNext, #cboxSlideshow, #cboxClose {
+  border: 0;
+  padding: 0;
+  margin: 0;
+  overflow: visible;
+  text-indent: -9999px;
+  width: 20px;
+  height: 20px;
+  position: absolute;
+  top: -20px;
+  background: url(img/colorbox/controls.png) no-repeat 0 0; }
+
+/* avoid outlines on :active (mouseclick), but preserve outlines on :focus (tabbed navigating) */
+#cboxPrevious:active, #cboxNext:active, #cboxSlideshow:active, #cboxClose:active {
+  outline: 0; }
+
+#cboxPrevious {
+  background-position: 0px 0px;
+  right: 44px; }
+
+#cboxPrevious:hover {
+  background-position: 0px -25px; }
+
+#cboxNext {
+  background-position: -25px 0px;
+  right: 22px; }
+
+#cboxNext:hover {
+  background-position: -25px -25px; }
+
+#cboxClose {
+  background-position: -50px 0px;
+  right: 0; }
+
+#cboxClose:hover {
+  background-position: -50px -25px; }
+
+.cboxSlideshow_on #cboxPrevious, .cboxSlideshow_off #cboxPrevious {
+  right: 66px; }
+
+.cboxSlideshow_on #cboxSlideshow {
+  background-position: -75px -25px;
+  right: 44px; }
+
+.cboxSlideshow_on #cboxSlideshow:hover {
+  background-position: -100px -25px; }
+
+.cboxSlideshow_off #cboxSlideshow {
+  background-position: -100px 0px;
+  right: 44px; }
+
+.cboxSlideshow_off #cboxSlideshow:hover {
+  background-position: -75px -25px; }
+
+body.overlay-visible .overlay {
+  z-index: 100;
+  position: fixed;
+  left: 0;
+  top: 0;
+  display: block;
+  width: 100%;
+  height: 100%;
+  opacity: 1;
+  -webkit-overflow-scrolling: touch;
+  transition: all 0.2s ease-in-out;
+  background-color: rgba(255, 255, 255, 0.85); }
+  @media screen and (prefers-reduced-motion: reduce) {
+    body.overlay-visible .overlay {
+      transition: none; } }
+
+.loader {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  display: block;
+  width: 50px;
+  height: 50px;
+  margin-top: -25px;
+  margin-left: -25px;
+  border-style: solid;
+  border-width: 3px;
+  border-color: #21afe5;
+  border-right-color: transparent;
+  border-radius: 50%;
+  font-size: 0;
+  text-indent: -9999em;
+  background-clip: content-box;
+  -webkit-animation: load 1s infinite linear;
+  animation: load 1s infinite linear; }
+
+@-webkit-keyframes load {
+  0% {
+    -webkit-transform: rotate(0deg); }
+  100% {
+    -webkit-transform: rotate(360deg); } }
+@keyframes load {
+  0% {
+    transform: rotate(0deg); }
+  100% {
+    transform: rotate(360deg); } }
+@media (min-width: 992px) {
+  .content {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: flex-start;
+    margin-bottom: 2rem; } }
+
+.content-inner {
+  width: 100%; }
+
+.main-content,
+.sidebar {
+  margin-bottom: 2rem; }
+  @media (min-width: 992px) {
+    .main-content,
+    .sidebar {
+      margin-bottom: 0; } }
+
+@media (min-width: 992px) {
+  .main-content {
+    width: calc(100% - 390px);
+    flex-shrink: 0;
+    flex-grow: 0; }
+    .main-content.full-content {
+      flex-grow: 1;
+      width: 100%; } }
+
+.centered-content {
+  margin-left: auto;
+  margin-right: auto; }
+
+@media (min-width: 992px) {
+  .sidebar {
+    flex-grow: 0;
+    flex-shrink: 0;
+    width: 360px; }
+    .sidebar.sidebar-left {
+      order: 1;
+      margin-right: 30px; }
+    .sidebar.sidebar-right {
+      order: 2;
+      margin-left: 30px; } }
+
+.content-box {
+  border-radius: 0.25rem;
+  background-color: #fff; }
+
+.content-box-inner {
+  padding-top: 2rem;
+  padding-bottom: 2rem;
+  padding-left: 30px;
+  padding-right: 30px; }
+  .content-box-inner.content-box-caption {
+    padding-top: 0;
+    padding-bottom: 0;
+    text-align: center; }
+  .content-box-inner + .content-box-inner {
+    border-top: 2px solid #e7f7fd; }
+  @media (min-width: 992px) {
+    .main-content .content-box-inner {
+      padding-left: 60px;
+      padding-right: 60px; } }
+
+img {
+  max-width: 100%;
+  height: auto; }
+
+.full-width {
+  width: 100%; }
+
+.text-center {
+  text-align: center; }
+
+.more {
+  text-align: center; }
+
+.tags > div {
+  margin-bottom: -8px; }
+  .tags > div .btn {
+    margin: 0 8px 8px 0; }
+@media (min-width: 576px) {
+  .tags {
+    display: flex;
+    align-items: center; }
+    .tags h3 {
+      flex-grow: 0;
+      flex-shrink: 1;
+      margin-bottom: 0;
+      padding-right: 30px; }
+    .tags > div {
+      flex-grow: 1; } }
+
+h3 + h3 {
+  margin-top: -1rem; }
+
+.image-caption::after {
+  display: block;
+  clear: both;
+  content: ""; }
+.image-caption > img {
+  float: left;
+  width: 110px;
+  margin-right: 15px;
+  margin-bottom: 15px;
+  border-radius: 0.25rem; }
+
+.login-form-wrapper {
+  text-align: center; }
+
+.custom-select {
+  -webkit-appearance: none;
+  -moz-appearance: none; }
+
+.pagination {
+  justify-content: center; }
+
+code {
+  background-color: #fdffd6;
+  border: 1px solid #e9e9e9; }
 
 .code-block {
   display: block;
-  padding: 2px 5px; }
-  .code-block + .code-block {
-    margin-top: 1rem; }
+  margin-bottom: 1rem;
+  padding: 2px 5px;
+  font-size: 0.8203125rem; }
+  .code-block:last-child {
+    margin-bottom: 0; }
