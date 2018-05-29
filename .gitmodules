@@ -1,6 +1,0 @@
-[submodule "bootstrap"]
-	path = bootstrap
-	url = https://github.com/twbs/bootstrap.git
-[submodule "popper.js"]
-	path = popper.js
-	url = https://github.com/FezVrasta/popper.js.git
