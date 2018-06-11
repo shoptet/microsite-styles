@@ -1,4 +1,4 @@
-#header {
+.header {
     background-color: $header-bg;
     border-bottom: 1px solid $border-color;
 }
@@ -13,6 +13,9 @@
         flex-grow: 1;
         flex-shrink: 1;
         width: auto;
+        &.header-search {
+            max-width: 300px;
+        }
         &:last-child {
             text-align: right;
         }
@@ -31,6 +34,10 @@
 .shp_logo {
     display: block;
     svg {
+        max-width: 100%;
         vertical-align: middle;
+    }
+    @media (min-width: map-get($grid-breakpoints, 'md')) {
+        padding-right: round($grid-gutter-width / 2);
     }
 }
