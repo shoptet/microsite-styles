@@ -56,6 +56,11 @@ h3 + h3 {
     text-align: center;
 }
 
+.form-error {
+    width: 100%;
+    color: $red;
+}
+
 // Bootstrap - move to separate file!
 .custom-select {
     -webkit-appearance: none;

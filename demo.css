@@ -1573,7 +1573,7 @@ fieldset:disabled a.btn {
 
 .btn-lg {
   padding: 1rem 1rem;
-  font-size: 1rem;
+  font-size: 1.5rem;
   line-height: 1.5;
   border-radius: 0.3rem; }
 
@@ -1646,7 +1646,7 @@ select.form-control:focus::-ms-value {
 .col-form-label-lg {
   padding-top: calc(1rem + 1px);
   padding-bottom: calc(1rem + 1px);
-  font-size: 1rem;
+  font-size: 1.5rem;
   line-height: 1.5; }
 
 .col-form-label-sm {
@@ -1701,7 +1701,7 @@ select.form-control-sm:not([size]):not([multiple]), .input-group-sm > select.for
 .input-group-lg > .input-group-prepend > .btn,
 .input-group-lg > .input-group-append > .btn {
   padding: 1rem 1rem;
-  font-size: 1rem;
+  font-size: 1.5rem;
   line-height: 1.5;
   border-radius: 0.3rem; }
 
@@ -1710,7 +1710,7 @@ select.form-control-lg:not([size]):not([multiple]), .input-group-lg > select.for
 .input-group-lg > .input-group-append > select.input-group-text:not([size]):not([multiple]),
 .input-group-lg > .input-group-prepend > select.btn:not([size]):not([multiple]),
 .input-group-lg > .input-group-append > select.btn:not([size]):not([multiple]) {
-  height: calc(3.5rem + 2px); }
+  height: calc(4.25rem + 2px); }
 
 .form-group {
   margin-bottom: 1rem; }
@@ -2063,7 +2063,7 @@ select.form-control-lg:not([size]):not([multiple]), .input-group-lg > select.for
   font-size: 75%; }
 
 .custom-select-lg {
-  height: calc(3.5rem + 2px);
+  height: calc(4.25rem + 2px);
   padding-top: 0.375rem;
   padding-bottom: 0.375rem;
   font-size: 125%; }
@@ -2374,7 +2374,7 @@ select.form-control-lg:not([size]):not([multiple]), .input-group-lg > select.for
 
 .pagination-lg .page-link {
   padding: 0.75rem 1.5rem;
-  font-size: 1rem;
+  font-size: 1.5rem;
   line-height: 1.5; }
 .pagination-lg .page-item:first-child .page-link {
   border-top-left-radius: 0.3rem;
@@ -2971,121 +2971,8 @@ pre {
     flex-grow: 0;
     flex-shrink: 1;
     width: 66.666666%;
+    padding-left: 30px;
     padding-right: 30px; } }
-
-.services {
-  display: flex;
-  flex-wrap: wrap;
-  align-items: stretch;
-  justify-content: space-between;
-  margin-bottom: -30px; }
-  .services + .more,
-  .services + .pagination {
-    margin-top: 2rem; }
-
-.service {
-  position: relative;
-  flex-grow: 0;
-  flex-shrink: 1;
-  display: flex;
-  flex-wrap: wrap;
-  width: 100%;
-  margin-bottom: 30px;
-  border: 1px solid #e9e9e9;
-  border-radius: 0.25rem;
-  transition: all 0.2s ease-in-out; }
-  @media screen and (prefers-reduced-motion: reduce) {
-    .service {
-      transition: none; } }
-  .service:hover {
-    text-decoration: none;
-    box-shadow: 0 0 0.65rem rgba(17, 17, 17, 0.15); }
-  @media (min-width: 576px) {
-    .service {
-      width: calc(50% - 15px); } }
-  @media (min-width: 992px) {
-    .service {
-      width: calc(25% - 23px); }
-      .half .service {
-        width: calc(50% - 15px); } }
-
-.service-img,
-.service-title,
-.service-info,
-.service-rating {
-  width: 100%; }
-
-.service-img {
-  align-self: flex-start;
-  display: block;
-  max-width: 100%;
-  margin: 0 0 15px; }
-  @media (min-width: 576px) {
-    .service-img {
-      margin-left: auto;
-      margin-right: auto;
-      border-top-left-radius: 0.25rem;
-      border-top-right-radius: 0.25rem; } }
-
-.service-title,
-.service-info {
-  margin: 0 0 8px;
-  padding: 0 15px; }
-
-.service-title {
-  font-size: 1rem; }
-
-.service-info {
-  display: flex;
-  flex-wrap: wrap;
-  align-items: center; }
-
-.service-price {
-  padding-right: 15px;
-  font-weight: 700;
-  color: #111; }
-
-.service-category,
-.service-rating {
-  color: #666; }
-
-.service-category {
-  padding-right: 15px; }
-
-.service-rating,
-.service-labels {
-  font-size: 0.8203125rem; }
-
-.service-rating {
-  display: flex;
-  align-self: flex-end;
-  align-items: center;
-  padding: 1rem 15px;
-  background-color: #e9ecef; }
-
-.service-rating-stars,
-.service-rating-count {
-  flex-grow: 1;
-  flex-shrink: 0;
-  width: 50%;
-  line-height: 0; }
-
-.service-labels {
-  position: absolute;
-  right: 0;
-  top: 0; }
-
-.service-label {
-  margin-bottom: 8px;
-  padding: 0 8px;
-  color: #fff; }
-  .service-label.service-label-shoptet {
-    background-color: #21afe5; }
-  .service-label:last-child {
-    border-top-right-radius: 0.25rem; }
-
-.service-rating-count {
-  text-align: right; }
 
 .halfs {
   display: flex;
@@ -3483,6 +3370,10 @@ h3 + h3 {
 
 .login-form-wrapper {
   text-align: center; }
+
+.form-error {
+  width: 100%;
+  color: #dc3545; }
 
 .custom-select {
   -webkit-appearance: none;

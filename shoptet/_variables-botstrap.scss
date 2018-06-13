@@ -18,7 +18,7 @@ $theme-colors: (
 );
 
 $font-size-base: 0.9375rem;
-$font-size-lg: round($font-size-base * 1.067);
+$font-size-lg: $font-size-base * 1.6;
 $font-family-sans-serif: 'Source Sans Pro', sans-serif;
 $headings-margin-bottom: $spacer / 2;
 $headings-font-family: 'Libre Franklin', sans-serif;
