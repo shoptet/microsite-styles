@@ -115,14 +115,17 @@ $service-4-gutter-width: round($grid-gutter-width * .75);
     position: absolute;
     right: 0;
     top: 0;
+    display: flex;
 }
 
 .service-label {
-    margin-bottom: round($grid-gutter-width / 4);
     padding: 0 round($grid-gutter-width / 4);
     color: #fff;
     &.service-label-shoptet {
         background-color: $shoptet-blue;
+    }
+    &.service-label-new {
+        background-color: $shoptet-green;
     }
     &:last-child {
         border-top-right-radius: $border-radius;
