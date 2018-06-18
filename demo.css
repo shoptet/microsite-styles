@@ -2978,6 +2978,9 @@ pre {
   display: flex;
   align-items: flex-start;
   flex-wrap: wrap; }
+  @media (min-width: 992px) {
+    .halfs.indented {
+      padding-left: 60px; } }
 
 .half {
   flex-grow: 1;
