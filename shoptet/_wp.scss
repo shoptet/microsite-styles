@@ -1,0 +1,159 @@
+/*
+* This part is copied from Bootstrap and updated to WP pagination structure.
+* Unfortunately there is no way how to change pagination links elements.
+*/
+.page-numbers {
+    position: relative;
+    display: block;
+    padding: $pagination-padding-y $pagination-padding-x;
+    margin-left: -$pagination-border-width;
+    line-height: $pagination-line-height;
+    color: $pagination-color;
+    background-color: $pagination-bg;
+    border: $pagination-border-width solid $pagination-border-color;
+
+    &:hover {
+        z-index: 2;
+        color: $pagination-hover-color;
+        text-decoration: none;
+        background-color: $pagination-hover-bg;
+        border-color: $pagination-hover-border-color;
+    }
+
+    &:focus {
+        z-index: 2;
+        outline: $pagination-focus-outline;
+        box-shadow: $pagination-focus-box-shadow;
+    }
+
+    // Opinionated: add "hand" cursor to non-disabled .page-link elements
+    &:not(:disabled):not(.current) {
+        cursor: pointer;
+    }
+    &:first-child {
+        margin-left: 0;
+        @include border-left-radius($border-radius);
+    }
+    &:last-child {
+        @include border-right-radius($border-radius);
+    }
+
+    &.current {
+        z-index: 1;
+        color: $pagination-active-color;
+        background-color: $pagination-active-bg;
+        border-color: $pagination-active-border-color;
+    }
+
+    &.current {
+        color: $pagination-disabled-color;
+        pointer-events: none;
+        // Opinionated: remove the "hand" cursor set previously for .page-link
+        cursor: auto;
+        background-color: $pagination-disabled-bg;
+        border-color: $pagination-disabled-border-color;
+    }
+}
+
+/* Categories */
+.category-image {
+    img {
+        width: 100%;
+        padding: 5px 0;
+    }
+    @media (max-width: map-get($grid-breakpoints, 'sm') -1) {
+        display: none;
+    }
+}
+
+.entry-thumbnail img {
+    padding: 5px 0;
+}
+
+/* Articles */
+article {
+    border: 1px solid $border-color;
+    border-radius: $border-radius;
+    padding: $article-padding;
+    margin: 0 0 $spacer;
+    @include clearfix;
+    .entry-thumbnail img {
+        padding: 5px 0;
+    }
+    .entry-more {
+        float: right;
+    }
+}
+
+.entry-meta {
+    display: flex;
+    flex-direction: row;
+    margin-bottom: 15px;
+    > div {
+        margin-right: 15px;
+        white-space: nowrap;
+        i {
+            margin-right: 5px;
+        }
+    }
+    .entry-tags {
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+    }
+}
+
+/* Single article */
+.post-navigation .nav-links {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.comments {
+    margin: 20px 0;
+}
+
+.comment-list {
+    list-style-type: none;
+    padding-left: 0;
+    ol {
+        list-style-type: none;
+        li {
+            &:first-child {
+                border-top: 1px solid #e9e9e9;
+                margin-top: 15px;
+                padding-top: 20px;
+            }
+        }
+    }
+    .comment-author {
+        img {
+            float: left;
+            padding-right: 20px;
+        }
+        .says {
+            display: none;
+        }
+    }
+}
+
+/* Comments form */
+.comment-respond {
+    margin-top: 20px;
+}
+
+.comment-form label:not([for="wp-comment-cookies-consent"]) {
+    display: block;
+}
+
+/* Helpers */
+.mb-0 {
+    margin-bottom: 0;
+}
+
+.align-self-center {
+    margin-left: auto;
+    margin-right: auto;
+    align-self: center;
+}
