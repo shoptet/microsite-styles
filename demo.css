@@ -3687,12 +3687,37 @@ article {
     overflow: hidden;
     text-overflow: ellipsis; }
 
-/* Single article */
+/* Post navigation buttons */
 .post-navigation {
   display: flex;
   flex-direction: row;
-  justify-content: space-between; }
+  justify-content: center; }
+  @media (max-width: 767px) {
+    .post-navigation {
+      display: block; } }
+  .post-navigation > div {
+    max-width: 100%;
+    overflow: hidden;
+    text-overflow: ellipsis; }
+    .post-navigation > div.nav-previous {
+      margin-right: 15px; }
+    .post-navigation > div.nav-next {
+      margin-left: 15px; }
+    @media (max-width: 767px) {
+      .post-navigation > div {
+        display: block;
+        width: 100%; }
+        .post-navigation > div.nav-previous, .post-navigation > div.nav-next {
+          margin: 0 0 15px; } }
+    .post-navigation > div a {
+      display: flex; }
+      .post-navigation > div a span {
+        max-width: 100%;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        padding: 0 5px; }
 
+/* Comments list */
 .comments {
   margin: 20px 0; }
 
