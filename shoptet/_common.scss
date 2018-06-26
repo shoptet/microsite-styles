@@ -61,12 +61,6 @@ h3 + h3 {
     color: $red;
 }
 
-// Bootstrap - move to separate file!
-.custom-select {
-    -webkit-appearance: none;
-    -moz-appearance: none;
-}
-
-.pagination {
-    justify-content: center;
+.required {
+    color: $red;
 }

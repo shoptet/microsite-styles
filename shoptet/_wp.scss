@@ -55,6 +55,10 @@
     }
 }
 
+.pagination {
+    justify-content: center;
+}
+
 /* Categories */
 .category-image {
     img {
@@ -104,7 +108,7 @@ article {
 }
 
 /* Single article */
-.post-navigation .nav-links {
+.post-navigation {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
@@ -145,6 +149,11 @@ article {
 
 .comment-form label:not([for="wp-comment-cookies-consent"]) {
     display: block;
+}
+
+.custom-select {
+    -webkit-appearance: none;
+    -moz-appearance: none;
 }
 
 /* Helpers */
