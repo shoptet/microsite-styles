@@ -11,26 +11,13 @@
 
 #shp_navigation_wrapper {
     position: relative;
-    &::after {
-        content: '';
-        position: absolute;
-        top: 0;
-        right: 0;
-        width: 6.25rem;
-        height: 100%;
-        @include gradient-x(rgba(255,255,255,0), rgba(255,255,255,1));
-        pointer-events: none;
-    }
 }
 
 #shp_navigation {
-    white-space: nowrap;
-    overflow-x: auto;
     > .shp_menu-item {
-        display: inline-block;
-        display: inline-block;
         > a {
             padding: $navigation-item-padding-y $navigation-item-padding-x;
+            display: block;
         }
         &:first-child {
             > a {
@@ -46,7 +33,6 @@
 }
 
 .shp_menu-item-link {
-    display: block;
     text-transform: uppercase;
     color: $navigation-color;
 }
@@ -57,4 +43,58 @@
     top: 100% !important;
     margin-left: -5px;
     margin-top: -5px;
+}
+
+/* RESPONSIVE MENU */
+.responsive-nav {
+    position: relative;
+    min-width: 250px;
+
+    .visible-links {
+        display: table;
+
+        li {
+            display: table-cell;
+
+            a {
+                display: block;
+            }
+        }
+    }
+
+    .hidden-links {
+        position: absolute;
+        right: 0px;
+        top: 100%;
+        border-top: 1px solid $border-color;
+
+        li {
+            display: block;
+
+            a {
+                padding: $navigation-item-padding-y $navigation-item-padding-x;
+                border-bottom: 1px solid $border-color;
+                background-color: $navigation-bg;
+                display: block;
+            }
+        }
+    }
+
+    .hidden {
+        visibility: hidden;
+    }
+
+    button {
+        position: absolute;
+        height: 100%;
+        right: 0;
+        top: 0;
+        border: 0;
+        outline: none;
+        color: #fff;
+        cursor: pointer;
+
+        &:hover {
+        }
+    }
 }
