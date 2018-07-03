@@ -1,6 +1,6 @@
-$fa-font-path: "../../../scaffolding/vendor/fa/webfonts";
-$claim-bg-image: url('../img/claim.png');
-$colorbox-path: "../../../scaffolding/img/colorbox/";
+$fa-font-path: "../scaffolding/vendor/fa/webfonts";
+$claim-bg-image: url('../src/dist/img/claim.png');
+$colorbox-path: "../scaffolding/img/colorbox/";
 
 @import "shoptet/variables-bootstrap";
 @import "vendor/bs/scss/functions";
@@ -23,7 +23,12 @@ $colorbox-path: "../../../scaffolding/img/colorbox/";
 @import "vendor/bs/scss/alert";
 @import "vendor/bs/scss/code";
 @import "vendor/bs/scss/card";
+@import "vendor/bs/scss/close";
+
 @import "vendor/bs/scss/utilities/background";
+@import "vendor/bs/scss/utilities/display";
+@import "vendor/bs/scss/utilities/flex";
+@import "vendor/bs/scss/utilities/spacing";
 
 @import "vendor/bs/scss/dropdown";
 
