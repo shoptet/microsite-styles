@@ -3,7 +3,7 @@ $navigation-item-padding-x: 0.875rem;
 $navigation-color: #000;
 $navigation-bg: #fff;
 
-$header-padding-y: 2.133rem;
+$header-padding-y: 1.882rem;
 $header-bg: #fff;
 
 $gray: $gray-400;
@@ -23,6 +23,8 @@ $section-secondary-color: $body-color;
 $section-secondary-bg: #f3f8fb;
 
 $claim-image-height: 239px;
+$claim-font-size-sm: 1.471rem;
+$claim-font-size: 1.875rem;
 
 $image-caption-width: 110px;
 
@@ -45,3 +47,5 @@ $content-box-padding-y: $spacer;
 $content-box-padding-x: $grid-gutter-width;
 
 $article-padding: 15px 20px;
+
+$heading-sm-ratio: .75;

@@ -27,6 +27,9 @@
     &.section-center {
         text-align: center;
     }
+    &.section-hidden {
+        display: none;
+    }
 }
 
 .section-inner {

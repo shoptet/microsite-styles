@@ -2,6 +2,52 @@ html {
     font-size: 17px;
 }
 
+h1, h2, h3, h4, h5, h6,
+.h1, .h2, .h3, .h4, .h5, .h6 {
+    margin-top: $headings-margin-bottom * 2;
+    &:first-child {
+        margin-top: 0;
+    }
+}
+
+h1,
+.h1 {
+    .breadcrumb + & {
+        margin-top: 0;
+    }
+    @media (max-width: map-get($grid-breakpoints, 'md') - 1) {
+        font-size: $h1-font-size * $heading-sm-ratio;
+    }
+}
+
+h2,
+.h2 {
+    @media (max-width: map-get($grid-breakpoints, 'md') - 1) {
+        font-size: $h2-font-size * $heading-sm-ratio;
+    }
+}
+
+h3,
+.h3 {
+    @media (max-width: map-get($grid-breakpoints, 'md') - 1) {
+        font-size: $h3-font-size * $heading-sm-ratio;
+    }
+}
+
+h4,
+.h4 {
+    @media (max-width: map-get($grid-breakpoints, 'md') - 1) {
+        font-size: $h4-font-size * $heading-sm-ratio;
+    }
+}
+
+h5,
+.h5 {
+    @media (max-width: map-get($grid-breakpoints, 'md') - 1) {
+        font-size: $h5-font-size * $heading-sm-ratio;
+    }
+}
+
 img {
     max-width: 100%;
     height: auto;
