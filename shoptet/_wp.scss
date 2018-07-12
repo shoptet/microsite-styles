@@ -151,6 +151,10 @@ article {
             + div {
                 padding-top: 0;
             }
+            &:only-child {
+                text-align: center;
+                padding: 0;
+            }
         }
         .btn {
             display: inline-block;
@@ -221,6 +225,13 @@ article {
 
 /* Alert */
 .alert {
+    display: flex; //let images align to notes
+    .row {
+        width: 100%;
+        width: -moz-available;
+        width: -webkit-fill-available;
+        width: fill-available;
+    }
     .alert-icon {
         display: none;
         font-size: 300%;
