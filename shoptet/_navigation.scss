@@ -13,36 +13,57 @@
     position: relative;
 }
 
-#shp_navigation {
-    > .shp_menu-item {
+
+.shp_menu-item {
+    display: inline-block;
+    white-space: nowrap;
+    .shp_menu-item-link {
+        text-transform: uppercase;
+        color: $navigation-color;
+    }
+    > a {
+        padding: $navigation-item-padding-y $navigation-item-padding-x;
+        display: inline-block;
+    }
+    &:first-child {
         > a {
-            padding: $navigation-item-padding-y $navigation-item-padding-x;
-            display: block;
-        }
-        &:first-child {
-            > a {
-                padding-left: 0;
-            }
-        }
-        &:last-child {
-            > a {
-                padding-right: 0;
-            }
+            padding-left: 0;
         }
     }
-}
-
-.shp_menu-item-link {
-    text-transform: uppercase;
-    color: $navigation-color;
-}
-
-.shp_navigation-submenu {
-    display: none;
-    left: 0;
-    top: 100% !important;
-    margin-left: -5px;
-    margin-top: -5px;
+    &:last-child {
+        > a {
+            padding-right: 0;
+        }
+    }
+    .caret {
+        padding: $navigation-item-padding-y $navigation-item-padding-x $navigation-item-padding-y ($navigation-item-padding-x / 2);
+        display: inline-block;
+        cursor: pointer;
+    }
+    .has-dropdown & {
+        display: block;
+    }
+    &.has-dropdown > a {
+        padding-right: $navigation-item-padding-x / 2;
+    }
+    ul {
+        padding: 0;
+        li,
+        li:first-child,
+        li:last-child {
+            a {
+                padding: $navigation-item-padding-y / 2 $navigation-item-padding-x;
+                display: block;
+                &.shp_menu-item-link-first {
+                    padding-top: $navigation-item-padding-y;
+                    padding-bottom: $navigation-item-padding-y;
+                }
+            }
+        }
+        .shp_menu-item-link {
+            text-transform: none;
+        }
+    }
 }
 
 /* RESPONSIVE MENU */
@@ -53,29 +74,27 @@
     .visible-links {
         display: table;
 
-        li {
+        > li {
             display: table-cell;
-
-            a {
-                display: block;
-            }
         }
     }
 
     .hidden-links {
         position: absolute;
-        right: 0px;
+        right: 0;
         top: 100%;
         border-top: 1px solid $border-color;
+        z-index: 100;
+        padding: 0;
 
-        li {
+        > li {
             display: block;
+            background-color: $navigation-bg;
+            border-bottom: 1px solid $border-color;
 
             a {
                 padding: $navigation-item-padding-y $navigation-item-padding-x;
-                border-bottom: 1px solid $border-color;
                 background-color: $navigation-bg;
-                display: block;
             }
         }
     }
@@ -93,8 +112,5 @@
         outline: none;
         color: #fff;
         cursor: pointer;
-
-        &:hover {
-        }
     }
 }
