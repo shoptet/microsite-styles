@@ -1,3 +1,12 @@
+.claim,
+.claim h1 {
+    font-family: $font-family-base;
+    font-size: $claim-font-size-sm;
+    font-weight: 100;
+    @media (min-width: map-get($grid-breakpoints, 'lg')) {
+        font-size: $claim-font-size;
+    }
+}
 
 .claim {
     text-align: center;
@@ -27,7 +36,6 @@
         }
     }
     @media (min-width: map-get($grid-breakpoints, 'lg')) {
-        font-size: $claim-font-size;
         &::after {
             height: $claim-image-height;
         }

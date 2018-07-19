@@ -54,9 +54,11 @@
             a {
                 padding: $navigation-item-padding-y / 2 $navigation-item-padding-x;
                 display: block;
-                &.shp_menu-item-link-first {
+                &.first {
                     padding-top: $navigation-item-padding-y;
                     padding-bottom: $navigation-item-padding-y;
+                    border-bottom: 1px solid $border-color;
+                    border-radius: $border-radius $border-radius 0 0;
                 }
             }
         }
