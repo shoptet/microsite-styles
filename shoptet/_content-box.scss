@@ -3,7 +3,6 @@
         display: flex;
         flex-wrap: wrap;
         align-items: flex-start;
-        margin-bottom: $spacer;
     }
 }
 
@@ -14,9 +13,6 @@
 .main-content,
 .sidebar {
     margin-bottom: $spacer;
-    @media (min-width: map-get($grid-breakpoints, 'lg')) {
-        margin-bottom: 0;
-    }
 }
 
 .main-content {
