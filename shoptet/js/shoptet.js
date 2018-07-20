@@ -21,27 +21,22 @@
                 function setup(resNavDiv) {
                     visibleLinks = resNavDiv.find('.visible-links');
                     visibleLinks.children('li').each(function() {
-                        $(this).attr('data-width', $(this).width());
+                        $(this).attr('data-width', $(this).outerWidth());
                     });
 
                     //hidden navigation
                     if (!resNavDiv.find('.hidden-links').length) {
-                        resNavDiv.append('<button class="btn"><div class="fas fa-bars"></div></button><ul class="hidden-links hidden"></ul>');
+                        resNavDiv.append('<button class="navigation-btn"><div class="fas fa-bars"></div></button><ul class="hidden-links hidden"></ul>');
                     }
                     hiddenLinks = resNavDiv.find('.hidden-links');
                     button = resNavDiv.find('button');
-
-                    //calculate visible links
-                    update(resNavDiv);
                 }
 
                 function update(resNavDiv) {
                     maxWidth = resNavDiv.width();
+                    var filledSpace = button.outerWidth();
 
-                    if(visibleLinks.width() > maxWidth) {
-                        button.show();
-                        var filledSpace = button.width();
-
+                    if((visibleLinks.outerWidth() + filledSpace) > maxWidth) {
                         // push excess to hidden links
                         visibleLinks.children('li').each(function(index) {
                             filledSpace += $(this).data('width');
@@ -52,7 +47,7 @@
 
 
                     } else {
-                        filledSpace = visibleLinks.width() + button.width();
+                        filledSpace += visibleLinks.width();
 
                         // push missing to visible links
                         hiddenLinks.children('li').each(function(index) {
@@ -61,10 +56,12 @@
                                 $(this).appendTo(visibleLinks);
                             }
                         });
+                    }
 
-                        if (hiddenLinks.children('li').length == 0) {
-                            button.hide();
-                        }
+                    if (hiddenLinks.children('li').length == 0) {
+                        button.hide();
+                    } else {
+                        button.show();
                     }
                 }
 
@@ -86,27 +83,24 @@ $(document).ready(function(){
     $('.responsive-nav').shpResponsiveNavigation();
 
 
-    /* FULLWIDTH VIDEO SNIPPET start */
-    var $fullwidthVideos = $("iframe.fullwidth"),
-        $fluidEl = $(".header-inner");
-
-    // Figure out and save aspect ratio for each video
-    $fullwidthVideos.each(function() {
+    /* IFRAME VIDEO RESPONSIVE SNIPPET start */
+    var $iframeVideos = $("iframe");
+    $iframeVideos.each(function() {
         $(this)
-            .data('aspectRatio', $(this).height() / $(this).width())
-            // and remove the hard coded width/height
-            .removeAttr('height').removeAttr('width');
+            .data('aspectRatio', $(this).height() / $(this).outerWidth());
     });
 
-    // When the window is resized
     $(window).resize(function() {
-        var newWidth = $fluidEl.width();
-        $fullwidthVideos.each(function() {
+        $iframeVideos.each(function() {
             var $el = $(this);
-            $el.width(newWidth).height(newWidth * $el.data('aspectRatio'));
+            var parentWidth = $el.parents("div").outerWidth();
+            if($el.hasClass('fullwidth') || ($el.outerWidth() > parentWidth)) {
+                $el.width(parentWidth).height(parentWidth * $el.data('aspectRatio'))
+                .removeAttr('height').removeAttr('width');
+            }
         });
         // One resize to fix all videos on page load
     }).resize();
-    /* FULLWIDTH VIDEO SNIPPET end */
+    /* IFRAME VIDEO RESPONSIVE SNIPPET end */
 
 });

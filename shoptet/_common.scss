@@ -1,6 +1,12 @@
 html {
     font-size: 17px;
 }
+body {
+    font-size: $font-size-base;
+    @media (max-width: map-get($grid-breakpoints, 'md') - 1) {
+        font-size: $font-size-base * $fontsize-sm-ratio;
+    }
+}
 
 h1, h2, h3, h4, h5, h6,
 .h1, .h2, .h3, .h4, .h5, .h6 {
@@ -12,39 +18,37 @@ h1, h2, h3, h4, h5, h6,
 
 h1,
 .h1 {
-    .breadcrumb + & {
-        margin-top: 0;
-    }
     @media (max-width: map-get($grid-breakpoints, 'md') - 1) {
-        font-size: $h1-font-size * $heading-sm-ratio;
+        font-size: $h1-font-size * $fontsize-sm-ratio;
+        margin-top: $headings-margin-bottom;
     }
 }
 
 h2,
 .h2 {
     @media (max-width: map-get($grid-breakpoints, 'md') - 1) {
-        font-size: $h2-font-size * $heading-sm-ratio;
+        font-size: $h2-font-size * $fontsize-sm-ratio;
     }
 }
 
 h3,
 .h3 {
     @media (max-width: map-get($grid-breakpoints, 'md') - 1) {
-        font-size: $h3-font-size * $heading-sm-ratio;
+        font-size: $h3-font-size * $fontsize-sm-ratio;
     }
 }
 
 h4,
 .h4 {
     @media (max-width: map-get($grid-breakpoints, 'md') - 1) {
-        font-size: $h4-font-size * $heading-sm-ratio;
+        font-size: $h4-font-size * $fontsize-sm-ratio;
     }
 }
 
 h5,
 .h5 {
     @media (max-width: map-get($grid-breakpoints, 'md') - 1) {
-        font-size: $h5-font-size * $heading-sm-ratio;
+        font-size: $h5-font-size * $fontsize-sm-ratio;
     }
 }
 
@@ -117,4 +121,45 @@ h3 + h3 {
 
 .required {
     color: $red;
+}
+
+blockquote {
+    margin: $grid-gutter-width auto;
+    font-style: italic;
+    color: $gray-dark;
+    padding: $grid-gutter-width round($grid-gutter-width * 2) round($grid-gutter-width / 2);
+    border-left: 8px solid $shoptet-green;
+    position: relative;
+    background: $gray-lighter;
+    height: fit-content;
+
+    &:before,
+    &:after {
+        font-family: Arial;
+        color:  $shoptet-green;
+        font-size: 4rem;
+        line-height: 4rem;
+        position: absolute;
+        width: $grid-gutter-width;
+        height: $grid-gutter-width;
+    }
+    &:before {
+        content: "\201C";
+        left: round($grid-gutter-width / 2);
+        top: round($grid-gutter-width / 2);
+        text-align: left;
+    }
+    &:after{
+        content: "\201D";
+        right: $grid-gutter-width;
+        bottom: round($grid-gutter-width / 2);
+        text-align: right;
+    }
+}
+
+@media (max-width: map-get($grid-breakpoints, 'md') - 1) {
+    .btn,
+    .form-control {
+        font-size: $font-size-base * $fontsize-sm-ratio;
+    }
 }
