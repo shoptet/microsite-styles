@@ -138,10 +138,10 @@ article {
             + div {
                 padding-top: 0;
             }
-        }
-        &:only-child {
-            text-align: center;
-            padding: 0;
+            &:only-child {
+                text-align: center;
+                padding: 0;
+            }
         }
         .btn {
             display: inline-block;

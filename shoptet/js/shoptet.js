@@ -93,7 +93,7 @@ $(document).ready(function(){
     $(window).resize(function() {
         $iframeVideos.each(function() {
             var $el = $(this);
-            var parentWidth = $el.parents("div").outerWidth();
+            var parentWidth = $el.parents("div").width();
             if($el.hasClass('fullwidth') || ($el.outerWidth() > parentWidth)) {
                 $el.width(parentWidth).height(parentWidth * $el.data('aspectRatio'))
                 .removeAttr('height').removeAttr('width');
