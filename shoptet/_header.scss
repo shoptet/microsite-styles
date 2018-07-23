@@ -24,12 +24,12 @@
         padding-bottom: $header-padding-y - round($spacer / 2);
         > div {
             padding-bottom: round($spacer / 2);
-            &:first-child {
-                width: 100%;
-                text-align: center;
-            }
+            text-align: center;
+            margin: auto;
+            width: 100%;
+            &:first-child,
             &:last-child {
-                text-align: left;
+                text-align: center;
             }
             &.header-search {
                 order: 3;
