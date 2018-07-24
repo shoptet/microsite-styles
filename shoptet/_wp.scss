@@ -216,17 +216,91 @@ article {
 /* Alert */
 .alert {
     display: flex;
+    &,
+    &.alert-dismissible {
+        padding: .75rem 1.25rem;
+    }
     .row {
         width: 100%;
         width: -moz-available;
         width: -webkit-fill-available;
         width: fill-available;
+        flex-wrap: nowrap;
     }
     .alert-icon {
-        display: none;
-        font-size: 300%;
+        font-size: 200%;
+        min-width: 30px;
         @media (min-width: map-get($grid-breakpoints, 'sm')) {
-            display: block;
+            font-size: 250%;
+            min-width: 40px;
+        }
+        @media (min-width: map-get($grid-breakpoints, 'lg')) {
+            font-size: 300%;
+            min-width: 50px;
+        }
+    }
+}
+
+/* CTA shortcode */
+.cta {
+    padding: $spacer;
+    background: $gray-lighter;
+    text-align: center;
+    border-radius: 10px;
+    form {
+        .form-protection {
+            display: none;
+        }
+        .fieldset {
+            margin: 0 auto;
+            padding: 10px;
+            background: #fff;
+            border: 1px solid #e7e7e7;
+            border-radius: 5px;
+            justify-content: center;
+            width: -moz-fit-content;
+            width: fit-content;
+            display: flex;
+            align-items: center;
+            align-content: center;
+            flex-wrap: nowrap;
+            min-width: 0;
+        }
+        input[type="text"] {
+            background: #fff;
+            color: #1f1f1f;
+            border: 1px solid transparent;
+            min-width: 400px;
+            font-size: 16px;
+            height: 50px;
+            line-height: 20px;
+            font-weight: 400;
+            padding: 0 10px;
+            outline: none;
+            margin: 0;
+            box-shadow: none;
+            text-transform: none;
+            width: auto;
+        }
+        button[type="submit"] {
+            background: #f7a12b;
+            color: #fff;
+            border: 1px solid #f7a12b;
+            cursor: pointer;
+            white-space: nowrap;
+            margin: 0;
+            text-transform: uppercase;
+            margin: 0 0 0 5px;
+            font-size: 12px;
+            line-height: 16px;
+            height: 50px;
+            font-weight: 400;
+            border-radius: 5px !important;
+            padding: 0 10px;
+            outline: none;
+            strong {
+                font-size: 18px;
+            }
         }
     }
 }

@@ -82,7 +82,6 @@ $(document).ready(function(){
     /* START RESPONSIVE NAVIGATION */
     $('.responsive-nav').shpResponsiveNavigation();
 
-
     /* IFRAME VIDEO RESPONSIVE SNIPPET start */
     var $iframeVideos = $("iframe");
     $iframeVideos.each(function() {
