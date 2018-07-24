@@ -3,9 +3,6 @@ html {
 }
 body {
     font-size: $font-size-base;
-    @media (max-width: map-get($grid-breakpoints, 'md') - 1) {
-        font-size: $font-size-base * $fontsize-sm-ratio;
-    }
 }
 
 h1, h2, h3, h4, h5, h6,
@@ -19,7 +16,7 @@ h1, h2, h3, h4, h5, h6,
 h1,
 .h1 {
     @media (max-width: map-get($grid-breakpoints, 'md') - 1) {
-        font-size: $h1-font-size * $fontsize-sm-ratio;
+        font-size: $h1-font-size * .8;
         margin-top: $headings-margin-bottom;
     }
 }
@@ -27,28 +24,21 @@ h1,
 h2,
 .h2 {
     @media (max-width: map-get($grid-breakpoints, 'md') - 1) {
-        font-size: $h2-font-size * $fontsize-sm-ratio;
+        font-size: $h2-font-size * .8;
     }
 }
 
 h3,
 .h3 {
     @media (max-width: map-get($grid-breakpoints, 'md') - 1) {
-        font-size: $h3-font-size * $fontsize-sm-ratio;
+        font-size: $h3-font-size * .9;
     }
 }
 
 h4,
 .h4 {
     @media (max-width: map-get($grid-breakpoints, 'md') - 1) {
-        font-size: $h4-font-size * $fontsize-sm-ratio;
-    }
-}
-
-h5,
-.h5 {
-    @media (max-width: map-get($grid-breakpoints, 'md') - 1) {
-        font-size: $h5-font-size * $fontsize-sm-ratio;
+        font-size: $h3-font-size * .8;
     }
 }
 
@@ -154,12 +144,5 @@ blockquote {
         right: $grid-gutter-width;
         bottom: round($grid-gutter-width / 2);
         text-align: right;
-    }
-}
-
-@media (max-width: map-get($grid-breakpoints, 'md') - 1) {
-    .btn,
-    .form-control {
-        font-size: $font-size-base * $fontsize-sm-ratio;
     }
 }
