@@ -93,7 +93,7 @@ article {
     .entry-more {
         float: right;
     }
-    .row {
+    .section-inner.container & .row {
         max-width: unset;
     }
 }
