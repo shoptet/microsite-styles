@@ -17,6 +17,7 @@
 .shp_menu-item {
     display: inline-block;
     white-space: nowrap;
+    position: relative;
     .shp_menu-item-link {
         text-transform: uppercase;
         color: $navigation-color;
@@ -60,6 +61,13 @@
                     border-bottom: 1px solid $border-color;
                     border-radius: $border-radius $border-radius 0 0;
                 }
+            }
+            &.has-dropdown > a {
+                display: inline-block;
+            }
+            &.has-dropdown .caret {
+                padding-top: 0;
+                padding-bottom: 0;
             }
         }
         .shp_menu-item-link {
