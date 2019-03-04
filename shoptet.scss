@@ -24,6 +24,7 @@ $colorbox-path: "../scaffolding/img/colorbox/";
 @import "vendor/bs/scss/code";
 @import "vendor/bs/scss/card";
 @import "vendor/bs/scss/close";
+@import "vendor/bs/scss/tooltip";
 
 @import "vendor/bs/scss/utilities/background";
 @import "vendor/bs/scss/utilities/display";
@@ -51,5 +52,6 @@ $colorbox-path: "../scaffolding/img/colorbox/";
 @import "shoptet/loader";
 @import "shoptet/content-box";
 @import "shoptet/icon-links";
+@import "shoptet/tooltip";
 @import "shoptet/wp";
 @import "shoptet/common";
