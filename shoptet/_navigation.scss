@@ -85,6 +85,12 @@
     position: relative;
     min-width: 250px;
 
+    @media (max-width: map-get($grid-breakpoints, 'sm') - 1) {
+        .container > & {
+            margin-right: -($grid-gutter-width / 2);
+        }
+    }
+
     .visible-links {
         display: table;
 

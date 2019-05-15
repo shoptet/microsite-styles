@@ -67,10 +67,4 @@
     + .content-box-inner {
         border-top: 2px solid $body-bg;
     }
-    @media (min-width: map-get($grid-breakpoints, 'lg')) {
-        .main-content & {
-            padding-left: round($content-box-padding-x * 2);
-            padding-right: round($content-box-padding-x * 2);
-        }
-    }
 }
