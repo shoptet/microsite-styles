@@ -1,6 +1,6 @@
-$fa-font-path: "../scaffolding/vendor/fa/webfonts";
-$claim-bg-image: url('../src/dist/img/claim.png');
-$colorbox-path: "../scaffolding/img/colorbox/";
+$fa-font-path: "../../dist/fonts";
+$claim-bg-image: url('../../dist/img/claim.png');
+$colorbox-path: "../../dist/img/colorbox/";
 
 @import "shoptet/variables-bootstrap";
 @import "vendor/bs/scss/functions";
