@@ -1,0 +1,7 @@
+{
+    "repository.callsign" : "MCSSTYLES",
+    "phabricator.uri" : "https://phabricator.shoptet.cz",
+    "load" : [
+        "../phabricator"
+    ]
+}
