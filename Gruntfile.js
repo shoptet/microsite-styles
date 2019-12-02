@@ -6,7 +6,7 @@ module.exports = function(grunt) {
         sass: {
             production: {
                 options: {
-                    style: 'compressed'
+                    style: 'expanded'
                 },
                 files: {
                     'shoptet.css': 'shoptet.scss'
