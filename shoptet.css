@@ -6655,7 +6655,7 @@ button.bg-orange:focus {
   max-width: 350px;
 }
 .header-inner > div.header-search {
-  max-width: 300px;
+  max-width: 350px;
 }
 .header-inner > div:last-child {
   flex-grow: 0;
