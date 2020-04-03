@@ -16,7 +16,7 @@
 #### Bootstrap v4.1.1
 https://github.com/twbs/bootstrap
 
-#### Font Awesome Free v5.0.13
+#### Font Awesome Free v5.13.0
 https://github.com/FortAwesome/Font-Awesome
 
 #### Colorbox v1.6.4

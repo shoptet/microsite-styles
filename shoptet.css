@@ -6363,6 +6363,7 @@ button.bg-orange:focus {
 .fas,
 .far,
 .fal,
+.fad,
 .fab {
   -moz-osx-font-smoothing: grayscale;
   -webkit-font-smoothing: antialiased;
@@ -6433,15 +6434,16 @@ button.bg-orange:focus {
 }
 
 /*!
- * Font Awesome Free 5.0.13 by @fontawesome - https://fontawesome.com
- * License - https://fontawesome.com/license (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License)
+ * Font Awesome Free 5.13.0 by @fontawesome - https://fontawesome.com
+ * License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License)
  */
 @font-face {
   font-family: "Font Awesome 5 Free";
   font-style: normal;
   font-weight: 900;
-  src: url("../../dist/fonts/fa-solid-900.eot");
-  src: url("../../dist/fonts/fa-solid-900.eot?#iefix") format("embedded-opentype"), url("../../dist/fonts/fa-solid-900.woff2") format("woff2"), url("../../dist/fonts/fa-solid-900.woff") format("woff"), url("../../dist/fonts/fa-solid-900.ttf") format("truetype"), url("../../dist/fonts/fa-solid-900.svg#fontawesome") format("svg");
+  font-display: block;
+  src: url("./vendor/fa/webfonts/fa-solid-900.eot");
+  src: url("./vendor/fa/webfonts/fa-solid-900.eot?#iefix") format("embedded-opentype"), url("./vendor/fa/webfonts/fa-solid-900.woff2") format("woff2"), url("./vendor/fa/webfonts/fa-solid-900.woff") format("woff"), url("./vendor/fa/webfonts/fa-solid-900.ttf") format("truetype"), url("./vendor/fa/webfonts/fa-solid-900.svg#fontawesome") format("svg");
 }
 .fa,
 .fas {
@@ -6765,7 +6767,7 @@ button.bg-orange:focus {
   width: 100%;
   height: 150px;
   margin-top: 30px;
-  background-image: url("../../dist/img/claim.png");
+  background-image: url("../src/dist/img/claim.png");
   background-position: center center;
   background-repeat: no-repeat;
   background-size: contain;
@@ -7016,7 +7018,7 @@ button.bg-orange:focus {
 }
 
 #cboxLoadingGraphic {
-  background: url(../../dist/img/colorbox/loading.gif) no-repeat center center;
+  background: url(../src/dist/img/colorbox/loading.gif) no-repeat center center;
 }
 
 #cboxLoadingOverlay {
@@ -7048,7 +7050,7 @@ button.bg-orange:focus {
   height: 20px;
   position: absolute;
   top: -20px;
-  background: url(../../dist/img/colorbox/controls.png) no-repeat 0 0;
+  background: url(../src/dist/img/colorbox/controls.png) no-repeat 0 0;
 }
 
 /* avoid outlines on :active (mouseclick), but preserve outlines on :focus (tabbed navigating) */
