@@ -7329,6 +7329,7 @@ a.has-icon:hover span {
   }
 }
 .category-header .category-image img {
+  width: 100%;
   max-width: 100%;
   padding: 5px 0;
 }
