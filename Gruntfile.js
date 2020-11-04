@@ -12,6 +12,18 @@ module.exports = function(grunt) {
                     'shoptet.css': 'shoptet.scss'
                 }
             }
+        },
+        watch: {
+            css: {
+                files: [
+                    'shoptet.scss',
+                    'shoptet/*.scss',
+                ],
+                tasks: ['sass'],
+                options: {
+                    livereload: 35729
+                }
+            },
         }
     });
 
