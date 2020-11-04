@@ -44,6 +44,7 @@ $colorbox-path: "../src/dist/img/colorbox/";
 @import 'vendor/fa/scss/larger';
 @import 'vendor/fa/scss/fixed-width';
 @import 'vendor/fa/scss/solid';
+@import 'vendor/fa/scss/brands';
 
 @import "shoptet/icons";
 @import "shoptet/navigation";
@@ -60,3 +61,4 @@ $colorbox-path: "../src/dist/img/colorbox/";
 @import "shoptet/tooltip";
 @import "shoptet/wp";
 @import "shoptet/common";
+@import "shoptet/social-share";
