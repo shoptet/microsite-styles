@@ -7713,6 +7713,9 @@ th {
 .tags > div .btn {
   margin: 0 8px 8px 0;
 }
+.tags h3 {
+  white-space: nowrap;
+}
 @media (min-width: 576px) {
   .tags {
     display: flex;

@@ -79,6 +79,9 @@ th {
             margin: 0 round($grid-gutter-width / 4) round($grid-gutter-width / 4) 0;
         }
     }
+    h3 {
+        white-space: nowrap;
+    }
     @media (min-width: map-get($grid-breakpoints, 'sm')) {
         display: flex;
         align-items: center;
