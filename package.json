@@ -14,10 +14,8 @@
     "grunt": "^1.4.1",
     "grunt-cli": "^1.4.3",
     "grunt-contrib-watch": "^1.1.0",
+    "grunt-dart-sass": "^2.0.1",
     "load-grunt-tasks": "^5.1.0",
     "sass": "^1.38.2"
-  },
-  "dependencies": {
-    "grunt-dart-sass": "^2.0.1"
   }
 }
