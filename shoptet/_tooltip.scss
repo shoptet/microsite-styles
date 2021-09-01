@@ -1,10 +1,10 @@
 .tooltip {
     div {
-        margin-bottom: round($spacer / 2);
+        margin-bottom: round($spacer * 0.5);
         text-align: left;
     }
     ul {
-        padding-left: round($spacer / 2);
+        padding-left: round($spacer * 0.5);
         text-align: left;
     }
 }
