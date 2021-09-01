@@ -29,7 +29,7 @@ $theme-colors: (
 $font-size-base: 1rem;
 $font-size-lg: $font-size-base * 1.2;
 $font-family-sans-serif: 'Source Sans Pro', sans-serif;
-$headings-margin-bottom: $spacer / 2;
+$headings-margin-bottom: $spacer * 0.5;
 $headings-font-family: 'Libre Franklin', sans-serif;
 $headings-font-weight: 300;
 $headings-color: inherit;

@@ -29,9 +29,9 @@
         }
     }
     @media (max-width: map-get($grid-breakpoints, 'lg') - 1) {
-        padding-bottom: $header-padding-y - round($spacer / 2);
+        padding-bottom: $header-padding-y - round($spacer * 0.5);
         > div {
-            padding-bottom: round($spacer / 2);
+            padding-bottom: round($spacer * 0.5);
             text-align: center;
             margin: auto;
             width: 100%;
@@ -53,19 +53,19 @@
         vertical-align: middle;
     }
     @media (min-width: map-get($grid-breakpoints, 'lg')) {
-        padding-right: round($grid-gutter-width / 2);
+        padding-right: round($grid-gutter-width * 0.5);
     }
 }
 
 .header-login {
     .btn-add {
-        margin-right: round($grid-gutter-width / 2);
+        margin-right: round($grid-gutter-width * 0.5);
     }
     @media (max-width: map-get($grid-breakpoints, 'sm') - 1) {
         .btn-add {
             display: block;
             margin-right: 0;
-            margin-bottom: round($spacer / 2);
+            margin-bottom: round($spacer * 0.5);
         }
     }
 }

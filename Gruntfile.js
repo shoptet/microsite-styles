@@ -1,9 +1,10 @@
 module.exports = function(grunt) {
 
     require("load-grunt-tasks")(grunt);
+    grunt.loadNpmTasks('grunt-dart-sass');
 
     grunt.initConfig({
-        sass: {
+        'dart-sass': {
             production: {
                 options: {
                     style: 'expanded'
@@ -19,7 +20,7 @@ module.exports = function(grunt) {
                     'shoptet.scss',
                     'shoptet/*.scss',
                 ],
-                tasks: ['sass'],
+                tasks: ['dart-sass'],
                 options: {
                     livereload: 35729
                 }
@@ -27,6 +28,6 @@ module.exports = function(grunt) {
         }
     });
 
-    grunt.registerTask('default', ['sass']);
+    grunt.registerTask('default', ['dart-sass']);
 
 };

@@ -17,19 +17,19 @@
         width: 50%;
         .aligned-right &:first-child {
             order: 2;
-            padding-left: $grid-gutter-width / 2;
+            padding-left: $grid-gutter-width * 0.5;
         }
         .aligned-right &:last-child {
             order: 1;
-            padding-right: $grid-gutter-width / 2;
+            padding-right: $grid-gutter-width * 0.5;
         }
         .aligned-left &:first-child {
             order: 1;
-            padding-right: $grid-gutter-width / 2;
+            padding-right: $grid-gutter-width * 0.5;
         }
         .aligned-left &:last-child {
             order: 2;
-            padding-left: $grid-gutter-width / 2;
+            padding-left: $grid-gutter-width * 0.5;
         }
     }
     @media (max-width: map-get($grid-breakpoints, 'md') - 1) {

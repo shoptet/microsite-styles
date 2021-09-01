@@ -74,9 +74,9 @@ th {
 
 .tags {
     > div {
-        margin-bottom: round(-$grid-gutter-width / 4);
+        margin-bottom: round(-$grid-gutter-width * 0.25);
         .btn {
-            margin: 0 round($grid-gutter-width / 4) round($grid-gutter-width / 4) 0;
+            margin: 0 round($grid-gutter-width * 0.25) round($grid-gutter-width * 0.25) 0;
         }
     }
     h3 {
@@ -98,7 +98,7 @@ th {
 }
 
 h3 + h3 {
-    margin-top: round(-$headings-margin-bottom / 2);
+    margin-top: round(-$headings-margin-bottom * 0.5);
 }
 
 .image-caption {
@@ -106,8 +106,8 @@ h3 + h3 {
     > img {
         float: left;
         width: $image-caption-width;
-        margin-right: round($grid-gutter-width / 2);
-        margin-bottom: round($grid-gutter-width / 2);
+        margin-right: round($grid-gutter-width * 0.5);
+        margin-bottom: round($grid-gutter-width * 0.5);
         border-radius: $border-radius;
     }
 }
@@ -129,7 +129,7 @@ blockquote {
     margin: $grid-gutter-width auto;
     font-style: italic;
     color: $gray-dark;
-    padding: $grid-gutter-width round($grid-gutter-width * 2) round($grid-gutter-width / 2);
+    padding: $grid-gutter-width round($grid-gutter-width * 2) round($grid-gutter-width * 0.5);
     border-left: 8px solid $shoptet-green;
     position: relative;
     background: $gray-lighter;
@@ -147,14 +147,14 @@ blockquote {
     }
     &:before {
         content: "\201C";
-        left: round($grid-gutter-width / 2);
-        top: round($grid-gutter-width / 2);
+        left: round($grid-gutter-width * 0.5);
+        top: round($grid-gutter-width * 0.5);
         text-align: left;
     }
     &:after{
         content: "\201D";
         right: $grid-gutter-width;
-        bottom: round($grid-gutter-width / 2);
+        bottom: round($grid-gutter-width * 0.5);
         text-align: right;
     }
 }
