@@ -1,11 +1,7 @@
-// Wordpress microsite
-$fa-font-path: "./vendor/fa/webfonts";
-$claim-bg-image: url('../src/dist/img/claim.png');
-$colorbox-path: "../src/dist/img/colorbox/";
-// Marketplace/other non-wordpress microsite:
-//$fa-font-path: "../../dist/fonts";
-//$claim-bg-image: url('../../dist/img/claim.png');
-//$colorbox-path: "../../dist/img/colorbox/";
+// Wordpress microsite paths
+$fa-font-path: "./vendor/fa/webfonts" !default;
+$claim-bg-image: url('../src/dist/img/claim.png') !default;
+$colorbox-path: "../src/dist/img/colorbox/" !default;
 
 @import "shoptet/variables-bootstrap";
 @import "vendor/bs/scss/functions";
