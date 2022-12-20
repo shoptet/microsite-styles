@@ -166,3 +166,20 @@ a[data-toggle="tooltip"] {
         border-bottom: none;
     }
 }
+
+.premium {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: baseline;
+    justify-content: space-around;
+    .btn {
+        color: $premium-btn-color;
+        background-color: $premium-btn-bg;
+        border-color: $premium-btn-bg;
+    }
+    .btn:hover {
+        color: $premium-btn-color;
+        background-color: $premium-btn-hover;
+        border-color: $premium-btn-hover;
+      }
+  }
