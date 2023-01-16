@@ -65,6 +65,10 @@
                     }
                 }
 
+                document.fonts.load('1em "Source Sans Pro"').then(function() {
+                    update($this);
+                })
+
                 $(window).resize(function() {
                     update($this);
                 });
