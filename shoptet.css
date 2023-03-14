@@ -6179,8 +6179,8 @@ button.bg-orange:focus {
   display: none;
 }
 .section.section-premium {
-  background-color: black;
-  color: white;
+  background-color: #F6F6F6;
+  border-bottom: 1px solid #d9d9d9;
 }
 
 .section-inner .breadcrumb {
