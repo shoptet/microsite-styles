@@ -32,8 +32,8 @@
         display: none;
     }
     &.section-premium {
-        background-color: black;
-        color: white;
+        background-color: $premium-section-color;
+        border-bottom: 1px solid $border-color;
       }
 }
 
