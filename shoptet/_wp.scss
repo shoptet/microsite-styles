@@ -65,6 +65,9 @@
     @media (max-width: map-get($grid-breakpoints, 'sm') - 1) {
         margin-top: $headings-margin-bottom;
     }
+    .premium-title {
+        color: $premium-link-color;
+    }
     .category-image {
         img {
             width: 100%;

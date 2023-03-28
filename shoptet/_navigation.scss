@@ -22,6 +22,9 @@
         text-transform: uppercase;
         color: $navigation-color;
     }
+    .shp_menu-item-link.premium {
+        color: $premium-link-color;
+    }
     > a {
         padding: $navigation-item-padding-y $navigation-item-padding-x;
         display: inline-block;
