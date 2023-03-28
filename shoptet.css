@@ -5965,6 +5965,9 @@ button.bg-orange:focus {
   text-transform: uppercase;
   color: #000;
 }
+.shp_menu-item .shp_menu-item-link.premium {
+  color: #EE7B62;
+}
 .shp_menu-item > a {
   padding: 0.5294rem 0.875rem;
   display: inline-block;
@@ -6171,6 +6174,12 @@ button.bg-orange:focus {
 }
 .section.section-perex h2 {
   margin-bottom: 0;
+}
+.section.section-addons-premium, .section.section-perex-premium {
+  background: rgba(237, 123, 98, 0.1) !important;
+}
+.section.section-addons-premium a, .section.section-perex-premium a {
+  color: #EE7B62;
 }
 .section.section-center {
   text-align: center;
@@ -6768,6 +6777,9 @@ a.has-icon:hover span {
   .category-header {
     margin-top: 1rem;
   }
+}
+.category-header .premium-title {
+  color: #EE7B62;
 }
 .category-header .category-image img {
   width: 100%;

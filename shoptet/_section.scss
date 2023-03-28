@@ -24,6 +24,15 @@
         h2 {
             margin-bottom: 0;
         }
+
+    }
+    &.section-addons-premium,
+    &.section-perex-premium {
+        background: $premium-bg !important;
+      }
+    &.section-addons-premium a, 
+    &.section-perex-premium a{
+        color: $premium-link-color; 
     }
     &.section-center {
         text-align: center;
