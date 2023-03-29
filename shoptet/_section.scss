@@ -21,15 +21,20 @@
     &.section-perex {
         color: $section-perex-color;
         background-color: $section-perex-bg;
+        &.section-perex-premium{
+            background-color: $premium-bg;
+        }
         h2 {
             margin-bottom: 0;
         }
-
     }
-    &.section-addons-premium,
-    &.section-perex-premium {
-        background: $premium-bg !important;
-      }
+    &.section-addons-premium {
+        background-color: $premium-bg;
+    }
+    &.section-addons-premium .premium-title,
+    &.section-perex-premium .premium-title {
+        color: $premium-link-color;
+    }
     &.section-addons-premium a, 
     &.section-perex-premium a{
         color: $premium-link-color; 
