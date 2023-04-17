@@ -29,11 +29,16 @@
     &.section-addons-premium,
     &.section-perex-premium {
         background: $premium-bg !important;
-      }
+    }
     &.section-addons-premium a, 
     &.section-perex-premium a{
         color: $premium-link-color; 
     }
+    &.section-addons-premium .premium-title, 
+    &.section-perex-premium .premium-title {
+        color: #EE7B62;
+    }
+      
     &.section-center {
         text-align: center;
     }

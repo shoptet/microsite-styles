@@ -6176,9 +6176,12 @@ button.bg-orange:focus {
   margin-bottom: 0;
 }
 .section.section-addons-premium, .section.section-perex-premium {
-  background: rgba(237, 123, 98, 0.1) !important;
+  background: rgb(255, 245, 241) !important;
 }
 .section.section-addons-premium a, .section.section-perex-premium a {
+  color: #EE7B62;
+}
+.section.section-addons-premium .premium-title, .section.section-perex-premium .premium-title {
   color: #EE7B62;
 }
 .section.section-center {
